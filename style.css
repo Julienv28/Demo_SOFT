@@ -116,3 +116,82 @@ h1 {
     color: var(--primary);
     margin: 0;
 }
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.by {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    font-weight: 400;
+}
+
+/* CARDS & CONTAINERS */
+.container { padding: 80px 10%; }
+
+.soft-card {
+    background: white;
+    padding: 30px;
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.05);
+}
+
+.pulse-ring {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 15px; height: 15px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* GRIDS */
+.description-grid, .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 80px 10%;
+}
+
+.solution-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.solution-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-10px);
+}
+
+/* FORMULAIRE */
+.trial-form {
+    text-align: center;
+    padding: 100px 10%;
+    background: var(--soft-gradient);
+    color: white;
+    border-radius: 60px;
+    margin: 40px;
+}
+
+.trial-form input {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    margin-right: 10px;
+}
